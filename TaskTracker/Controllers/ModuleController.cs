@@ -8,8 +8,12 @@ namespace TaskTracker.Controllers
 {
     public class ModuleController : Controller
     {
-        // GET: Module
-        public ActionResult Index()
+        public ActionResult HomePage()
+        {
+            return View();
+        }
+        
+        public ActionResult AboutPage()
         {
             return View();
         }
