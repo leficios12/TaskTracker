@@ -3,11 +3,9 @@
 }
 
 
-<p ng-init="titleFunc()"></p>
-
 <div class="max-w-xl mx-auto px-6 py-10">
 
-    <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+    <div class="bg-white rounded-xl shadow-lg border border-gray-100">
         <div class="bg-sky-950 px-6 py-4 text-center">
             <h2 class="text-lg font-semibold text-white">User Registration</h2>
             <p class="text-sky-200 text-sm">Fill in the details below</p>
@@ -46,9 +44,15 @@
                 </div>
             </div>
 
-            <div class="flex gap-3">
+            <div class="flex gap-3 py-5">
                 <button ng-click="registrationFunc()" class="flex-1 bg-sky-950 text-white px-4 py-2 rounded-md hover:bg-sky-900 active:scale-95 transition">Submit</button>
                 <button ng-click="clearFunc()" class="flex-1 border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50 active:scale-95 transition">Clear</button>
+            </div>
+            <div class="text-center my-5">
+                <p>
+                    Already have an account?
+                    <a href="/Module/LoginPage" class="text-sky-700 hover:text-sky-400">Login here</a>
+                </p>
             </div>
         </div>
     </div>

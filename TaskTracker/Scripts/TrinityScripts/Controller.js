@@ -2,7 +2,8 @@
     $scope.userArray = [];
     $scope.index = 0;
 
-    //Registration function
+
+    //Registration Page functions
     $scope.registrationFunc = function () {
         //validation for empty fields
         if ($scope.firstName == "" || $scope.lastName == "" || $scope.userName == ""
@@ -126,8 +127,6 @@
             }
         );
     }
-
-
 
     //Redirection functions
 
