@@ -17,5 +17,22 @@ namespace TaskTracker.Controllers
         {
             return View();
         }
+
+        public ActionResult LoginPage()
+        {
+            return View();
+        }
+
+        public ActionResult RegistrationPage()
+        {
+            return View();
+        }
+
+        public ActionResult ContactPage()
+        {
+            return View();
+        }
+
+
     }
 }
