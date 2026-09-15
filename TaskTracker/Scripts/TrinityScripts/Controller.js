@@ -15,7 +15,7 @@
             || $scope.Email == undefined || $scope.Password == undefined || $scope.ConfirmPassword == undefined
 
         ) {
-            $scope.SweetAlertError("Please fill in everything.");
+            $scope.SweetAlertError("Please fill in everything and accordingly to minimum characters.");
 
         }
 
@@ -46,6 +46,7 @@
         }
 
             //duplicate validations
+
 
         //username duplicate validation
         else if (isUsernameTaken($scope.userName)) {

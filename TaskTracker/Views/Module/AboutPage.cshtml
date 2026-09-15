@@ -2,4 +2,44 @@
     Layout = "~/Views/Shared/_TaskTrackerLayout.cshtml";
 }
 
+<div class="max-w-xl mx-auto px-6 py-10">
 
+    <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+        <div class="bg-sky-950 px-6 py-6 text-center">
+            <h2 class="text-2xl font-bold text-white">About NexTask</h2>
+            <p class="text-sky-200 text-sm mt-1">
+                TaskTracker is a lightweight task management application designed to help
+                individuals and teams organize, assign, and track their day-to-day tasks with ease.
+            </p>
+        </div>
+
+        <div class="p-6">
+            <table class="w-full">
+                <thead>
+                    <tr class="border-b border-gray-200">
+                        <th class="text-left py-2 text-sm font-semibold text-sky-700">Feature / Tech</th>
+                        <th class="text-left py-2 text-sm font-semibold text-sky-700">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-gray-100">
+                        <td class="py-3 text-gray-700">System Purpose</td>
+                        <td class="py-3 text-gray-700">Task & User Management</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="py-3 text-gray-700">Framework</td>
+                        <td class="py-3 text-gray-700">ASP.NET MVC & AngularJS</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="py-3 text-gray-700">UI Styling</td>
+                        <td class="py-3 text-gray-700">Tailwind CSS (CDN)</td>
+                </tbody>
+            </table>
+
+            <button ng-click="redirectHomePage()" class="w-full mt-6 bg-sky-950 text-white font-medium px-4 py-3 rounded-md hover:bg-sky-900 active:scale-95 transition">
+                Back to Home
+            </button>
+        </div>
+    </div>
+
+</div>
