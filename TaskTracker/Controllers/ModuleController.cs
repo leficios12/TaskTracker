@@ -36,7 +36,7 @@ namespace TaskTracker.Controllers
         // message  controller
         public string GetMessage()
         {
-            return "Welcome to the Task Tracker!";   
+            return "Welcome to the NexTask!";   
         }
 
 
