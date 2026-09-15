@@ -2,4 +2,40 @@
     Layout = "~/Views/Shared/_TaskTrackerLayout.cshtml";
 }
 
+<div class="max-w-xl mx-auto px-6 py-10">
 
+    <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+        <div class="bg-sky-950 px-6 py-6 text-center">
+            <h2 class="text-2xl font-bold text-white">Contact Support</h2>
+            <p class="text-sky-200 text-sm mt-1">
+                Need help? Reach out to us through any of the channels below.
+            </p>
+        </div>
+
+        <div class="p-6">
+            <table class="w-full">
+                <thead>
+                    <tr class="border-b border-gray-200">
+                        <th class="text-left py-2 text-sm font-semibold text-sky-700">Channel</th>
+                        <th class="text-left py-2 text-sm font-semibold text-sky-700">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-gray-100">
+                        <td class="py-3 text-gray-700">Email</td>
+                        <td class="py-3 text-gray-700">support@tasktracker.com</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 text-gray-700">Hotline</td>
+                        <td class="py-3 text-gray-700">+1 (800) 555-TASK</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button ng-click="redirectHomePage()" class="w-full mt-6 bg-sky-950 text-white font-medium px-4 py-3 rounded-md hover:bg-sky-900 active:scale-95 transition">
+                Back to Home
+            </button>
+        </div>
+    </div>
+
+</div>
