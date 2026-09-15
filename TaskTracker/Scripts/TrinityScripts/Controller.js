@@ -35,7 +35,7 @@
 
         //
         else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test($scope.Password)) {
-            $scope.SweetAlertError("Please enter a strong password. (8_characters,uppercase,lowercase,number, and a special character)");
+            $scope.SweetAlertError("Please enter a strong password. (8 characters, uppercase , lowercase , number , and a special character)");
         }
 
         //email validation using regex
@@ -125,13 +125,56 @@
 
         //Edit function 
         $scope.editFunc = function (userid) {
-            var userdata = $scope.userArray[userid];
-            userdata.username = $scope.userName;
-            userdata.firstname = $scope.firstName;
-            userdata.lastname = $scope.lastName;
-            userdata.email = $scope.Email;
-            userdata.password = $scope.Password;
-            userdata.confirmPassword = $scope.ConfirmPassword;
+
+            //validation for empty fields
+            if ($scope.firstName == "" || $scope.lastName == "" || $scope.userName == ""
+                || $scope.Email == "" || $scope.Password == "" || $scope.ConfirmPassword == "" ||
+
+                $scope.firstName == undefined || $scope.lastName == undefined || $scope.userName == undefined
+                || $scope.Email == undefined || $scope.Password == undefined || $scope.ConfirmPassword == undefined
+
+            ) {
+                $scope.SweetAlertError("Please fill in everything.");
+
+            }
+
+
+            //length validation 
+            else if ($scope.userName.length < 3 || $scope.userName.length > 20 ||
+                $scope.firstName.length < 3 || $scope.firstName.length > 28 ||
+                $scope.lastName.length < 3 || $scope.lastName.length > 28) {
+                $scope.SweetAlertError("Username must be 3-20 characters, and First/Last Name must be 3-28 characters.");
+            }
+
+
+            //password confirmation validation
+            else if ($scope.Password != $scope.ConfirmPassword) {
+                $scope.SweetAlertError("Passwords do not match.");
+            }
+
+            //
+            else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test($scope.Password)) {
+                $scope.SweetAlertError("Please enter a strong password. (8 characters, uppercase , lowercase , number , and a special character)");
+            }
+
+            //email validation using regex
+
+            else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($scope.Email)) {
+                $scope.SweetAlertError("Please enter a valid email address.");
+            }
+
+            //once validated , edit user data
+            else {
+                var userdata = $scope.userArray[userid];
+                userdata.username = $scope.userName;
+                userdata.firstname = $scope.firstName;
+                userdata.lastname = $scope.lastName;
+                userdata.email = $scope.Email;
+                userdata.password = $scope.Password;
+                userdata.confirmPassword = $scope.ConfirmPassword;
+            }
+
+
         }
 
         //Delete function
