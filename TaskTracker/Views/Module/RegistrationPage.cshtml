@@ -13,34 +13,34 @@
 
         <div class="p-6">
             <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">*Username</label>
-                <input type="text" ng-model="userName" class="w-full mb-3 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
+                <label class="block text-sm font-medium text-gray-700 mb-1">*Username (min: 3, max: 20)</label>
+                <input type="text" ng-model="userName" maxlength="20" minlength="3" class="w-full mb-3 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
             </div>
 
             <div class="flex gap-3">
                 <div class="flex-1">
-                    <label class="block text-sm font-medium text-gray-700 mb-1">*First Name</label>
-                    <input type="text" ng-model="firstName" class="w-full mb-3 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
+                    <label class="block text-sm font-medium text-gray-700 mb-1">*First Name (min: 3, max: 28)</label>
+                    <input type="text" ng-model="firstName" maxlength="28" minlength="3" class="w-full mb-3 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
                 </div>
                 <div class="flex-1">
-                    <label class="block text-sm font-medium text-gray-700 mb-1">*Last Name</label>
-                    <input type="text" ng-model="lastName" class="w-full mb-3 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
+                    <label class="block text-sm font-medium text-gray-700 mb-1">*Last Name (min: 3, max: 28)</label>
+                    <input type="text" ng-model="lastName" maxlength="28" minlength="3" class="w-full mb-3 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
                 </div>
             </div>
 
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1">*Email</label>
-                <input type="text" ng-model="Email" class="w-full mb-3 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
+                <input type="text" ng-model="Email" maxlength="100" minlength="5" class="w-full mb-3 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
             </div>
 
             <div class="flex gap-3">
                 <div class="flex-1">
-                    <label class="block text-sm font-medium text-gray-700 mb-1">*Password</label>
-                    <input type="password" ng-model="Password" class="w-full mb-5 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
+                    <label class="block text-sm font-medium text-gray-700 mb-1">*Password (min: 6, max: 30)</label>
+                    <input type="password" ng-model="Password" maxlength="30" minlength="6" class="w-full mb-5 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
                 </div>
                 <div class="flex-1">
-                    <label class="block text-sm font-medium text-gray-700 mb-1">*Confirm Password</label>
-                    <input type="password" ng-model="ConfirmPassword" class="w-full mb-5 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
+                    <label class="block text-sm font-medium text-gray-700 mb-1">*Confirm Password (min: 6, max: 30)</label>
+                    <input type="password" ng-model="ConfirmPassword" maxlength="30" minlength="6" class="w-full mb-5 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" />
                 </div>
             </div>
 

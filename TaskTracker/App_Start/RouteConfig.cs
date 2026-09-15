@@ -16,7 +16,7 @@ namespace TaskTracker
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Module", action = "HomePage", id = UrlParameter.Optional }
+                defaults: new { controller = "Module", action = "LoginPage", id = UrlParameter.Optional }
             );
         }
     }

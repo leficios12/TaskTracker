@@ -1,6 +1,7 @@
 ﻿app.service("TaskTrackerService", function ($http) {
-    this.fetchFunc = function () {
-        return $http.get("/Module/GetUsername")
-    }
 
+    //service function to fetch data from backend
+    this.fetchMessageFunc = function () {
+        return $http.get("/Module/GetMessage");
+    }
 });

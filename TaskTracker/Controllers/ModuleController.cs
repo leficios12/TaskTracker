@@ -33,6 +33,12 @@ namespace TaskTracker.Controllers
             return View();
         }
 
+        // message  controller
+        public string GetMessage()
+        {
+            return "Welcome to the Task Tracker!";   
+        }
+
 
     }
 }
