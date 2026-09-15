@@ -3,6 +3,7 @@
     $scope.index = 0;
 
 
+
     //Registration Page functions
     $scope.registrationFunc = function () {
 
@@ -44,6 +45,18 @@
             $scope.SweetAlertError("Please enter a valid email address.");
         }
 
+            //duplicate validations
+
+        //username duplicate validation
+        else if (isUsernameTaken($scope.userName)) {
+            $scope.SweetAlertError("Username is already taken.");
+        }
+
+        //email duplicate validation
+        else if (isEmailTaken($scope.Email)) {
+            $scope.SweetAlertError("Email is already taken.");
+        }
+
 
         //registration push array
         else {
@@ -69,6 +82,26 @@
             $scope.ConfirmPassword = "";
         }
     }
+
+    //For loops for duplicate validation on registration && edit function
+    function isUsernameTaken(username) {
+        for (var i = 0; i < $scope.userArray.length; i++) {
+            if ($scope.userArray[i].username === username) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function isEmailTaken(email) {
+        for (var i = 0; i < $scope.userArray.length; i++) {
+            if ($scope.userArray[i].email === email) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     //SweetAlert messages
 
@@ -162,6 +195,19 @@
             else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($scope.Email)) {
                 $scope.SweetAlertError("Please enter a valid email address.");
             }
+
+            //duplicate validations
+
+                //username duplicate validation
+                else if (isUsernameTaken($scope.userName)) {
+                    $scope.SweetAlertError("Username is already taken.");
+                }
+
+                //email duplicate validation
+                else if (isEmailTaken($scope.Email)) {
+                    $scope.SweetAlertError("Email is already taken.");
+                }
+
 
             //once validated , edit user data
             else {
