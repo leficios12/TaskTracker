@@ -2,7 +2,9 @@
     $scope.userArray = [];
     $scope.index = 0;
 
-
+    //Variables for regex
+    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     //Registration Page functions
     $scope.registrationFunc = function () {
@@ -34,20 +36,20 @@
             $scope.SweetAlertError("Passwords do not match.");
         } 
 
-        //
-        else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test($scope.Password)) {
+           
+        else if (!passwordRegex.test($scope.Password)) {
             $scope.SweetAlertError("Please enter a strong password. (8 characters, uppercase , lowercase , number , and a special character)");
         }
 
         //email validation using regex
 
-        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($scope.Email)) {
+        else if (!emailRegex.test($scope.Email)) {
             $scope.SweetAlertError("Please enter a valid email address.");
         }
 
-            //duplicate validations
 
 
+            //duplicate validations 
         //username duplicate validation
         else if (isUsernameTaken($scope.userName)) {
             $scope.SweetAlertError("Username is already taken.");
@@ -59,7 +61,7 @@
         }
 
 
-        //registration push array
+        //once inputs are validated => push into array
         else {
             var userData = {
                 id: $scope.index++,
@@ -71,6 +73,7 @@
                 confirmPassword: $scope.ConfirmPassword
                 
             };
+
             //clear input fields after registration
             $scope.userArray.push(userData);
             $scope.SweetAlertSuccess("Successfuly Registered");
@@ -187,13 +190,13 @@
             }
 
             //
-            else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test($scope.Password)) {
+            else if (!passwordRegex.test($scope.Password)) {
                 $scope.SweetAlertError("Please enter a strong password. (8 characters, uppercase , lowercase , number , and a special character)");
             }
 
             //email validation using regex
 
-            else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($scope.Email)) {
+            else if (!emailRegex.test($scope.Email)) {
                 $scope.SweetAlertError("Please enter a valid email address.");
             }
 
